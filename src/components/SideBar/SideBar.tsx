@@ -1,4 +1,4 @@
-import { ArrowBigDownDash, CircleCheck, DollarSign, Home, LogOut, Package, PanelBottom, Settings2, Users } from "lucide-react";
+import { ArrowBigDownDash, CircleCheck, Component, DollarSign, Home, LogOut, Package, PanelBottom, Settings2, Users } from "lucide-react";
 import { Button } from "../ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import Link from "next/link";
@@ -8,6 +8,7 @@ import { TooltipContent, TooltipTrigger } from "../ui/tooltip";
 export default function SideBar() {
  return (
   <div className="flex w-full flex-col bg-muted/40">
+
    {/* Desktopp */}
    <aside className="fixed inset-y-0 left-0 z-10 hidden w-14 border-r bg-background sm:flex flex-col">
 
@@ -47,6 +48,19 @@ export default function SideBar() {
         </Link>
        </TooltipTrigger>
        <TooltipContent side="right">Membros</TooltipContent>
+
+       <TooltipTrigger asChild>
+        <Link
+         href="#"
+         className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground"
+         prefetch={false}
+        >
+         <Component className="h-5 w-5 " />
+         <span className="sr-only">GC's</span>
+
+        </Link>
+       </TooltipTrigger>
+       <TooltipContent side="right">Grupo de Crescimento</TooltipContent>
 
        <TooltipTrigger asChild>
         <Link
@@ -162,6 +176,15 @@ export default function SideBar() {
         >
          <Users className="h-5 w-5 transition-all" />
          Membros
+        </Link>
+
+        <Link
+         href="#"
+         className="flex items-center gap-2.5 text-muted-foreground hover:text-foreground"
+         prefetch={false}
+        >
+         <Component className="h-5 w-5 transition-all" />
+         GC's
         </Link>
 
         <Link
