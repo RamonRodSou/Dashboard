@@ -18,12 +18,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-br">
       <body className={cn(
         "min-h-screen bg-background font-sans antialiased", inter.className
       )}>
 
-        <SideBar/>
+        <SideBar />
         {children}</body>
     </html>
   );
