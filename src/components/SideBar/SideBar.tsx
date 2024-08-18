@@ -19,7 +19,7 @@ export default function SideBar() {
         <nav className="flex flex-col items-center gap-4 px-2 py-5">
           <TooltipProvider>
             <Link
-              href="/"
+              href="/home"
               className="flex h-9 w-9 shrink-0 items-center justify-center bg-primary text-primary-foreground rounded-full"
             >
               <div className="h-8 w-8">
@@ -28,15 +28,13 @@ export default function SideBar() {
               <span className="sr-only">Logo Icon</span>
             </Link>
 
-            <Tooltip>
-              <MenuItem link="/login" text="Login" Icon={Package} />
-              <MenuItem link="/membros" text="Membros da igreja" Icon={Users} />
-              <MenuItem link="/gc" text="Grupo de Crescimento" Icon={Component} />
-              <MenuItem link="/caixa" text="Quanto tem em caixa" Icon={Package} />
-              <MenuItem link="/oferta" text="Ofertas da igreja" Icon={Component} />
-              <MenuItem link="/conta" text="Contas que a igreja tem que pagar" Icon={ArrowBigDownDash} />
-              <MenuItem link="/configuracao" text="Configurações" Icon={Settings2} />
-            </Tooltip>
+            <MenuItem link="/" text="Início" Icon={Package} />
+            <MenuItem link="/membros" text="Membros" Icon={Users} />
+            <MenuItem link="/gc" text="GF'S" Icon={Component} />
+            <MenuItem link="/caixa" text="Caixa" Icon={Package} />
+            <MenuItem link="/oferta" text="Ofertas" Icon={Component} />
+            <MenuItem link="/conta" text="Contas" Icon={ArrowBigDownDash} />
+            <MenuItem link="/configuracao" text="Configurações" Icon={Settings2} />
 
           </TooltipProvider>
         </nav>
@@ -45,7 +43,7 @@ export default function SideBar() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
-                  href="#"
+                  href="/"
                   className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-slate-50"
                   prefetch={false}
                 >
@@ -76,13 +74,11 @@ export default function SideBar() {
             <SheetContent side="left" className="sm:max-w-x">
               <nav className="grid gap-6 text-lg font-medium">
 
-              <MenuItemMob link="/"
+                <MenuItemMob link="/"
                   children={<div className="h-9 w-9 transition-all" >
                     <Image src={logo} alt="My Image" />
                   </div>}
                   text="IAF" />
-
-
                 <MenuItemMob link="/" Icon={Home} text="Início" />
                 <MenuItemMob link="/membros" Icon={Users} text="Membros" />
                 <MenuItemMob link="/gc" Icon={Component} text="GC's" />

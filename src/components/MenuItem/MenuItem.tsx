@@ -1,17 +1,17 @@
-import { TooltipContent, TooltipTrigger } from '@radix-ui/react-tooltip'
+import { TooltipContent, TooltipTrigger, Tooltip } from '@radix-ui/react-tooltip'
 import Link from 'next/link'
 import React from 'react'
 
 type Props = {
- link:string,
+ link: string,
  text: string,
  Icon: React.ComponentType<any>
  color?: string
 }
 
-function MenuItem({link, text, Icon, }: Props) {
+function MenuItem({ link, text, Icon, }: Props) {
  return (
-  <>
+  <Tooltip>
    <TooltipTrigger asChild>
     <Link
      href={link}
@@ -23,8 +23,9 @@ function MenuItem({link, text, Icon, }: Props) {
 
     </Link>
    </TooltipTrigger>
-   <TooltipContent side="right">{text}</TooltipContent>
-  </>
+   <TooltipContent className=' text-amber-900' side="right">{text}</TooltipContent>
+  </Tooltip>
+
  )
 }
 
