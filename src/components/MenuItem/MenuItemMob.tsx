@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React, { ReactHTMLElement } from 'react'
+import React from 'react'
 
 type Props = {
  link: string,

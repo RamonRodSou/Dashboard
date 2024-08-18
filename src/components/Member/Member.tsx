@@ -5,7 +5,7 @@ import { AvatarFallback } from "@radix-ui/react-avatar"
 
 function Member() {
   return (
-    <Card className="w-full md:w-1/2 md:max-w-[600] h-[600px]  ">
+    <Card className="w-full md:w-1/2 h-[400px] md:max-w-[600] md:h-[600px]  ">
       <CardHeader>
         <div className="flex items-center justify-center gap-4" >
           <CardTitle className="text-lg sm:text-xl text-gray-800">
@@ -23,7 +23,7 @@ function Member() {
         </div>
       </CardHeader>
 
-      <CardContent className=" overflow-auto  overflow-y-scroll h-[75%] m-4">
+      <CardContent className=" overflow-auto  overflow-y-scroll h-[65%] md:h-[75%] m-4">
 
         <article className="flex items-center gap-2 border-b py-2">
           <Avatar className="w-8 h-8 sm:w-10 sm:h-10 " >

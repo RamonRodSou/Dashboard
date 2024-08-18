@@ -57,8 +57,6 @@ export default function SideBar() {
         </nav>
       </aside>
 
-
-
       {/* Mobile */}
       <div className="sm:hidden flex flex-col sm:gap-4 sm:py-4 sm:pl-14 ">
         <header className="stick top-0 z-30 flex h-14 items-center px-4 border-b bg-slate-900  gap-4 
@@ -74,11 +72,11 @@ export default function SideBar() {
             <SheetContent side="left" className="sm:max-w-x">
               <nav className="grid gap-6 text-lg font-medium">
 
-                <MenuItemMob link="/"
-                  children={<div className="h-9 w-9 transition-all" >
+                <MenuItemMob link="/" text="IAF" >
+                <div className="h-9 w-9 transition-all" >
                     <Image src={logo} alt="My Image" />
-                  </div>}
-                  text="IAF" />
+                </div>
+                  </MenuItemMob>
                 <MenuItemMob link="/" Icon={Home} text="Início" />
                 <MenuItemMob link="/membros" Icon={Users} text="Membros" />
                 <MenuItemMob link="/gc" Icon={Component} text="GC's" />
