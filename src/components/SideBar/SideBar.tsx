@@ -28,7 +28,7 @@ export default function SideBar() {
               <span className="sr-only">Logo Icon</span>
             </Link>
 
-            <MenuItem link="/" text="Início" Icon={Package} />
+            <MenuItem link="/home" text="Início" Icon={Package} />
             <MenuItem link="/membros" text="Membros" Icon={Users} />
             <MenuItem link="/gc" text="GF'S" Icon={Component} />
             <MenuItem link="/caixa" text="Caixa" Icon={Package} />
@@ -73,11 +73,11 @@ export default function SideBar() {
               <nav className="grid gap-6 text-lg font-medium">
 
                 <MenuItemMob link="/" text="IAF" >
-                <div className="h-9 w-9 transition-all" >
+                  <div className="h-9 w-9 transition-all" >
                     <Image src={logo} alt="My Image" />
-                </div>
-                  </MenuItemMob>
-                <MenuItemMob link="/" Icon={Home} text="Início" />
+                  </div>
+                </MenuItemMob>
+                <MenuItemMob link="/home" Icon={Home} text="Início" />
                 <MenuItemMob link="/membros" Icon={Users} text="Membros" />
                 <MenuItemMob link="/gc" Icon={Component} text="GC's" />
                 <MenuItemMob link="/caixa" Icon={Package} text="Caixa" />
