@@ -23,7 +23,9 @@ export default function RootLayout({
         "min-h-screen bg-background font-sans antialiased", inter.className
       )}>
         <SideBar/>
-        {children}
+        <main className="flex-1 sm:ml-14 p-4">
+            {children}
+        </main>
       </body>
     </html>
   );

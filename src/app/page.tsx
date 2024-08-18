@@ -3,9 +3,10 @@ import Member from "@/components/Member/Member";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Component, DollarSign, Package2, Users } from "lucide-react";
 
-export default function Home() {
+
+export default function Home( ) {
   return (
-    <main className="sm:ml-14 p-4" >
+    <div>
       <section className="grid grid-cols-2 lg:grid-cols-4 gap-4" >
         <Card>
           <CardHeader>
@@ -76,11 +77,11 @@ export default function Home() {
         </Card>
         
       </section>
-
+      
       <section className="mt-4 flex flex-col md:flex-row gap-4">
         <Graph/>
         <Member/>
       </section>
-    </main>
-  );
+    </div>
+  )
 }

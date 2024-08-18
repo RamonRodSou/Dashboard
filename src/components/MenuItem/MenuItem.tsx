@@ -1,14 +1,15 @@
 import { TooltipContent, TooltipTrigger } from '@radix-ui/react-tooltip'
 import Link from 'next/link'
-import React, { ReactElement } from 'react'
+import React from 'react'
 
 type Props = {
  link:string,
  text: string,
  Icon: React.ComponentType<any>
+ color?: string
 }
 
-function BtnNav({link, text, Icon }: Props) {
+function MenuItem({link, text, Icon, }: Props) {
  return (
   <>
    <TooltipTrigger asChild>
@@ -27,4 +28,4 @@ function BtnNav({link, text, Icon }: Props) {
  )
 }
 
-export default BtnNav
+export default MenuItem
