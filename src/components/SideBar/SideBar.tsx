@@ -6,6 +6,7 @@ import { Tooltip, TooltipProvider } from "@radix-ui/react-tooltip";
 import { TooltipContent, TooltipTrigger } from "../ui/tooltip";
 import Image from "next/image";
 import logo from "../../img/iaf.png"
+import BtnNav from "../BtnNav/BtnNav";
 
 export default function SideBar() {
   return (
@@ -21,100 +22,19 @@ export default function SideBar() {
               className="flex h-9 w-9 shrink-0 items-center justify-center bg-primary text-primary-foreground rounded-full"
             >
               <div className="h-8 w-8">
-                <Image src={logo} alt="My Image"/>
+                <Image src={logo} alt="My Image" />
               </div>
               <span className="sr-only">Logo Icon</span>
             </Link>
 
             <Tooltip>
-              <TooltipTrigger asChild>
-                <Link
-                  href="#"
-                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-slate-50"
-                  prefetch={false}
-                >
-                  <Home className="h-5 w-5 " />
-                  <span className="sr-only">Início</span>
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent side="right">Início</TooltipContent>
-
-
-              <TooltipTrigger asChild>
-                <Link
-                  href="#"
-                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-slate-50"
-                  prefetch={false}
-                >
-                  <Users className="h-5 w-5 " />
-                  <span className="sr-only">Membros</span>
-
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent side="right">Membros</TooltipContent>
-
-              <TooltipTrigger asChild>
-                <Link
-                  href="#"
-                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-slate-50"
-                  prefetch={false}
-                >
-                  <Component className="h-5 w-5 " />
-                  <span className="sr-only">GC's</span>
-
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent side="right">Grupo de Crescimento</TooltipContent>
-
-              <TooltipTrigger asChild>
-                <Link
-                  href="#"
-                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-slate-50"
-                  prefetch={false}
-                >
-                  <Package className="h-5 w-5 " />
-                  <span className="sr-only">Em Caixa</span>
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent side="right">Em caixa</TooltipContent>
-
-              <TooltipTrigger asChild>
-                <Link
-                  href="#"
-                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-slate-50"
-                  prefetch={false}
-                >
-                  <DollarSign className="h-5 w-5 " />
-                  <span className="sr-only">Ofertas</span>
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent side="right">Ofertas</TooltipContent>
-
-              <TooltipTrigger asChild>
-                <Link
-                  href="#"
-                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-slate-50"
-                  prefetch={false}
-                >
-                  <ArrowBigDownDash className="h-5 w-5 " />
-                  <span className="sr-only">Contas</span>
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent side="right">Contas</TooltipContent>
-
-              <TooltipTrigger asChild>
-                <Link
-                  href="#"
-                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-slate-50"
-                  prefetch={false}
-                >
-                  <Settings2 className="h-5 w-5 " />
-                  <span className="sr-only">Configurações</span>
-
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent side="right">Configurações</TooltipContent>
-
+              <BtnNav link="/login" text="Login" Icon={Package}/>
+              <BtnNav link="/membros" text="Membros da igreja" Icon={Users} />
+              <BtnNav link="/gc" text="Grupo de Crescimento" Icon={Component} />
+              <BtnNav link="/caixa" text="Quanto tem em caixa" Icon={Package}/>
+              <BtnNav link="/oferta" text="Ofertas da igreja" Icon={Component} />
+              <BtnNav link="/conta" text="Contas que a igreja tem que pagar" Icon={ArrowBigDownDash}/>
+              <BtnNav link="/configuracao" text="Configurações" Icon={Settings2} />
             </Tooltip>
 
           </TooltipProvider>
@@ -156,7 +76,7 @@ export default function SideBar() {
               <nav className="grid gap-6 text-lg font-medium">
 
                 <Link
-                  href="#"
+                  href="/"
                   className="flex h-10 w-10 gap-2 rounded-full txt-lg items-center justify-center text-primary-foreground md:text-base"
                   prefetch={false}
                 >
@@ -167,7 +87,7 @@ export default function SideBar() {
                 </Link>
 
                 <Link
-                  href="#"
+                  href="/"
                   className="flex items-center gap-2.5 text-muted-foreground hover:text-slate-50"
                   prefetch={false}
                 >
@@ -176,7 +96,7 @@ export default function SideBar() {
                 </Link>
 
                 <Link
-                  href="#"
+                  href="/membros"
                   className="flex items-center gap-2.5 text-muted-foreground hover:text-slate-50"
                   prefetch={false}
                 >
@@ -185,7 +105,7 @@ export default function SideBar() {
                 </Link>
 
                 <Link
-                  href="#"
+                  href="/gc"
                   className="flex items-center gap-2.5 text-muted-foreground hover:text-slate-50"
                   prefetch={false}
                 >
@@ -194,16 +114,16 @@ export default function SideBar() {
                 </Link>
 
                 <Link
-                  href="#"
+                  href="/caixa"
                   className="flex items-center gap-2.5 text-muted-foreground hover:text-slate-50"
                   prefetch={false}
                 >
                   <Package className="h-5 w-5 transition-all" />
-                  Em caixa
+                  Caixa
                 </Link>
 
                 <Link
-                  href="#"
+                  href="/oferta"
                   className="flex items-center gap-2.5 text-muted-foreground hover:text-slate-50"
                   prefetch={false}
                 >
@@ -212,16 +132,16 @@ export default function SideBar() {
                 </Link>
 
                 <Link
-                  href="#"
+                  href="/conta"
                   className="flex items-center gap-2.5 text-muted-foreground hover:text-slate-50"
                   prefetch={false}
                 >
                   <ArrowBigDownDash className="h-5 w-5 transition-all" />
-                  Contas
+                  Conta
                 </Link>
 
                 <Link
-                  href="#"
+                  href="/configuraca"
                   className="flex items-center gap-2.5 text-muted-foreground hover:text-slate-50"
                   prefetch={false}
                 >

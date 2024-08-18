@@ -62,7 +62,7 @@ export default function Home() {
           <CardHeader>
             <div className="flex items-center justify-center"> 
             <CardTitle className="text-lg sm:text-xl text-gray-800 select-none">
-              Cestas Basicas
+              Doações
             </CardTitle>
             <Package2 className="ml-auto w-4 h-4"/>
             </div>
