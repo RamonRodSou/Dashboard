@@ -1,4 +1,4 @@
-import { ArrowBigDownDash, Component, DollarSign, Home, LogOut, Package, PanelBottom, Settings2, Users } from "lucide-react";
+import { ArrowBigDownDash, Component, DollarSign, Home, LogOut, Package, PanelBottom, Settings2, UserCheck, Users } from "lucide-react";
 import { Button } from "../ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import Link from "next/link";
@@ -30,6 +30,7 @@ export default function SideBar() {
 
             <MenuItem link="/home" text="Início" Icon={Package} />
             <MenuItem link="/membros" text="Membros" Icon={Users} />
+            <MenuItem link="/novomembro" text="Novo Membro" Icon={UserCheck} />
             <MenuItem link="/gc" text="GF'S" Icon={Component} />
             <MenuItem link="/caixa" text="Caixa" Icon={Package} />
             <MenuItem link="/oferta" text="Ofertas" Icon={Component} />
@@ -79,6 +80,7 @@ export default function SideBar() {
                 </MenuItemMob>
                 <MenuItemMob link="/home" Icon={Home} text="Início" />
                 <MenuItemMob link="/membros" Icon={Users} text="Membros" />
+                <MenuItemMob link="/novomembro" Icon={UserCheck} text="Novo Membros" />
                 <MenuItemMob link="/gc" Icon={Component} text="GC's" />
                 <MenuItemMob link="/caixa" Icon={Package} text="Caixa" />
                 <MenuItemMob link="/oferta" Icon={DollarSign} text="Ofertas" />
