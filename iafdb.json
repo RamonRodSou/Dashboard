@@ -1,0 +1,42 @@
+{
+  "membros": [
+    {
+      "id": "97dc",
+      "matricula": 100000,
+      "cadastro": "",
+      "nome": "Ramon Rodrigues",
+      "sobrenome": "De Souza",
+      "email": "ramonrodsouza@gmail.com",
+      "telefone": "21972923210",
+      "estadoCivil": "Casado(a)",
+      "cpf": "13287341707",
+      "nascimento": "1993-07-12T00:00:00.000Z",
+      "casamento": "2016-06-07T00:00:00.000Z",
+      "batismo": "2016-06-06T00:00:00.000Z",
+      "pai": "Marcos Antonio Silva de Souza",
+      "mae": "Hilda Maria Rodrigues de Souza",
+      "funcao": 2,
+      "cargo": 4,
+      "password": "123141231412"
+    },
+    {
+      "id": "9616",
+      "matricula": 100000,
+      "cadastro": "2024-09-05T20:02:59.355Z",
+      "nome": "Antonio Rodrigues",
+      "sobrenome": "de Souza",
+      "email": "Hilda Maria",
+      "telefone": "21972923210",
+      "estadoCivil": "Casado(a)",
+      "cpf": "13287341707",
+      "nascimento": "2024-09-05T20:02:59.355Z",
+      "casamento": "2024-09-05T20:02:59.355Z",
+      "batismo": "2024-09-05T20:02:59.355Z",
+      "pai": "Marcos Antonio Silva de Souza",
+      "mae": "Hilda Maria Rodrigues de Souza",
+      "funcao": 1,
+      "cargo": 4,
+      "password": "123141231412"
+    }
+  ]
+}
