@@ -5,6 +5,9 @@ import { createContext, useContext, useState } from "react";
 interface UserContextType {
   pessoa: IPessoa;
   setPessoa: React.Dispatch<React.SetStateAction<IPessoa>>;
+
+  users: IPessoa[];
+  setUsers: React.Dispatch<React.SetStateAction<IPessoa[]>>;
 }
 
 const UserContext = createContext<UserContextType | undefined>(undefined);
@@ -35,8 +38,11 @@ export const UserProvider = ({ children }: { children: React.ReactNode }) => {
     password: ''
   });
 
+  const [users, setUsers] = useState<IPessoa[]>([])
+
+
   return (
-    <UserContext.Provider value={{ pessoa, setPessoa }}>
+    <UserContext.Provider value={{ pessoa, setPessoa, users, setUsers }}>
       {children}
     </UserContext.Provider>
   );
